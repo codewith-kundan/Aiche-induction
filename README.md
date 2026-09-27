@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AIChE Chapter Executive Team Directory
 
-## Getting Started
+This is a complete, production-quality AIChE Chapter Executive Team Directory web application, designed with a high-end maximalist editorial and futuristic engineering aesthetic. It was built for the AIChE Web Development Team induction task.
 
-First, run the development server:
+## Features
+- **Maximalist UI/UX:** High-contrast, dark-first design inspired by chemical engineering, scientific laboratories, and modern technology.
+- **Responsive Layout:** Works beautifully across mobile, tablet, and desktop viewports without horizontal scrolling.
+- **Dynamic Filtering & Search:** Instantly filter members by department or search by name/role/department.
+- **Premium Member Cards:** Detailed member cards featuring abstract tech patterns, interactive hover states, and smooth transitions.
+- **Member Detail Modal:** A beautiful modal/drawer displaying comprehensive member information, social links, and bio. 
+- **Light / Dark Mode:** Fully functional theme toggler ensuring perfect contrast and readability on both themes.
+- **Micro-Interactions & Animations:** CSS/Tailwind-based tasteful animations such as float, fade-in, and hover state transforms for elevated user experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech Stack
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS (v4)
+- **Icons:** Lucide React
+- **Themes:** next-themes
+
+## Project Structure
+```
+src/
+├── app/
+│   ├── globals.css      # Core styles, animations, theme vars
+│   ├── layout.tsx       # Root layout containing Navbar, Footer, and ThemeProvider
+│   └── page.tsx         # Main page aggregating Hero and TeamDirectory
+├── components/
+│   ├── FilterBar.tsx    # Filter options and Search input
+│   ├── Footer.tsx       # Standard app footer
+│   ├── Hero.tsx         # Highly animated and visual intro header
+│   ├── MemberCard.tsx   # Visual card representation of an executive
+│   ├── MemberModal.tsx  # Detailed popup modal for the member
+│   ├── Navbar.tsx       # Main navigation and theme toggle
+│   ├── TeamDirectory.tsx # Stateful container for rendering the team
+│   └── ThemeProvider.tsx # Next-themes context wrapper
+├── data/
+│   └── members.ts       # Mocked robust data of 6 AIChE chapter members
+├── lib/
+│   └── utils.ts         # Tailwind `cn` utility function
+└── types/
+    └── member.ts        # TypeScript definitions for member types
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation & Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-url>
+   cd "AICHE INDUCTION"
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-To learn more about Next.js, take a look at the following resources:
+## Build for Production
+To generate a production build:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+This project can easily be deployed on Vercel. 
+1. Push your code to GitHub.
+2. Link your GitHub repository in the Vercel Dashboard.
+3. Vercel will automatically detect the Next.js framework and configure the deployment.
+4. Click "Deploy".
+# Aiche-induction
