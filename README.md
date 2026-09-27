@@ -74,3 +74,4 @@ This project can easily be deployed on Vercel.
 3. Vercel will automatically detect the Next.js framework and configure the deployment.
 4. Click "Deploy".
 # Aiche-induction
+# Aiche-induction
